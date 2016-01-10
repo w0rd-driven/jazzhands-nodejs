@@ -1,0 +1,11 @@
+{
+  "name": "jazzhands",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./jazzhands.js"
+  },
+  "dependencies": {
+    "debug": "~2.2.0"
+  }
+}
