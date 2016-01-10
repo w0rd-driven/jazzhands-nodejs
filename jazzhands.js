@@ -4,4 +4,34 @@
 
 var config = require("./config"),
     fs = require("fs"),
-    log = require("debug")("resume");
+    log = require("debug")("jazzhands"),
+    mkdirp = require("mkdirp");
+
+function jazzercise(path) {
+    console.log("Jazzercising...");
+    for (var index = 1; index <= 100; index++) {
+        var data = index;
+
+        if (index % 3 === 0) {
+            data = "Jazz";
+        } else if (index % 5 === 0) {
+            data = "Hands";
+        } else if (index % 15 === 0) {
+            data = "JazzHands";
+        }
+
+        console.log(data);
+    }
+}
+
+directory = config.buildDirectory + config.outputDirectory;
+file = directory + config.outputFile;
+console.log("Output directory: " + directory);
+console.log("Output file: " + file);
+
+mkdirp(directory, function(err) {
+    if (err)
+        console.error(err);
+    else
+        jazzercise(file);
+});
