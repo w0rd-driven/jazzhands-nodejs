@@ -13,13 +13,12 @@ function jazzercise(path) {
     for (var index = 1; index <= 100; index++) {
         var data = index;
 
-        if (index % 3 === 0) {
+        if (index % 3 === 0)
             data = "Jazz";
-        } else if (index % 5 === 0) {
+        if (index % 5 === 0)
             data = "Hands";
-        } else if (index % 15 === 0) {
+        if (index % 15 === 0)
             data = "JazzHands";
-        }
 
         console.log(data);
         fileStream.write(data + '\n');
