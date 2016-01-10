@@ -9,6 +9,7 @@ var config = require("./config"),
 
 function jazzercise(path) {
     console.log("Jazzercising...");
+    var fileStream = fs.createWriteStream(path);
     for (var index = 1; index <= 100; index++) {
         var data = index;
 
@@ -21,7 +22,9 @@ function jazzercise(path) {
         }
 
         console.log(data);
+        fileStream.write(data + '\n');
     }
+    fileStream.end();
 }
 
 directory = config.buildDirectory + config.outputDirectory;
