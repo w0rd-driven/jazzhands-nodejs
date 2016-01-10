@@ -6,6 +6,7 @@
     "start": "node ./jazzhands.js"
   },
   "dependencies": {
-    "debug": "~2.2.0"
+    "debug": "~2.2.0",
+    "mkdirp": "^0.5.1"
   }
 }
